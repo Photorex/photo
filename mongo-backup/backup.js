@@ -2,7 +2,7 @@ const cron = require('node-cron'), spawn = require('child_process').spawn;
 
 let dbBackupTask = cron.schedule('10 21 * * *', () => {
     let backupProcess = spawn('mongodump', [
-        '--db=maxartai',
+        '--db=photorend',
         '--archive=/var/www/mongo-backup/backup/',
         '--gzip'
       ]);
